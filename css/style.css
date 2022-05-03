@@ -22,6 +22,62 @@ body {
     font-family: Roboto, Helvetica, sans-serif;
 }
 
+/*    width: 200px;
+    height: 200px;
+    border: 5px solid;
+    border-radius: 50%;
+} */
+
+.loader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 10000;
+    animation: loader 3s forwards;
+}
+
+@keyframes loader {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: -10;
+    }
+}
+
+.circle {
+
+    border-top: 10px solid #9356DC;
+    border-bottom: 10px solid #FF79DA;
+    border-left: 10px solid #99E2D0;
+    border-right: 10px solid #99E2D0;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: spin 3s linear forwards;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+
 .logo {
     margin-top: 10px;
     text-align: center;
@@ -47,7 +103,7 @@ label i {
 
 input {
     border: none;
-    background-color: #f3f1f1;
+    background-color: transparent;
 }
 
 .spec {
@@ -56,7 +112,6 @@ input {
     text-align: center;
     background-color: #f6f6f6;
     padding: 40px 40px;
-    margin-bottom: 50px;
 }
 
 .presentation {
@@ -71,6 +126,7 @@ input {
 }
 
 .explore {
+    justify-content: center;
     width: 230px;
     background: linear-gradient(#FF79DA, #9356DC);
     padding: 15px;
@@ -81,29 +137,69 @@ input {
     box-shadow: 3px 3px 10px rgba(9, 9, 9, 0.25);
 }
 
+#working {
+    padding: 20px;
+}
+
 #working h2 {
-    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 ul {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    padding: 15px;
+    padding-left: 13px;
     gap: 20px;
 }
 
+li.number:nth-child(1)::before {
+    content: "1";
+}
+
+li.number:nth-child(2)::before {
+    content: "2";
+}
+
+
+li.number:nth-child(3)::before {
+    content: "3";
+}
+
+li:nth-child(3) {
+    background-color: rgba(147, 86, 220, 0.16);
+}
+
+li.number::before {
+    background-color: #9356DC;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    font-size: 1.8rem;
+    align-items: center;
+    justify-content: center;
+}
+
 .number {
-    font-size: 2rem;
-    padding: 25px 0;
-    margin-left: 20px;
+    font-size: 1.8rem;
+    padding: 0 40px;
+    display: flex;
+    height: 80px;
+    align-items: center;
     background-color: #f6f6f6;
     border-radius: 20px;
+    position: relative;
     box-shadow: 0 5px 10px lightgrey;
 }
 
+
 .symbol {
-    margin-right: 30px;
+    width: 40px;
     color: #9356DC;
 }
 
@@ -121,20 +217,28 @@ ul {
     box-shadow: 0 5px 10px lightgrey;
 }
 
+figure.restaurant_card {
+    height: 100%;
+}
+
 img {
-    height: 50vw;
+    height: calc(100% - 80px);
     object-fit: cover;
     border-radius: 20px 20px 0 0;
 }
 
 figcaption {
     color: black;
-    margin: 10px 0 0 10px;
+    height: 80px;
+    display: flex;
     position: relative;
+    flex-direction: column;
+    padding: 0 20px;
+    justify-content: center;
 }
 
 figcaption p {
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 .heart {
@@ -155,13 +259,12 @@ footer {
     font-weight: bold;
 }
 
-footer h3 {
+footer a {
+    display: block;
     margin: 0 0 10px 20px;
     color: #e6e6e6;
-}
-
-footer a {
     line-height: 1;
+    font-size: 15px;
 }
 
 footer i {
