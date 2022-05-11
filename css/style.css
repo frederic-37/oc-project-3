@@ -130,6 +130,12 @@ input {
     font-size: 1.8rem;
     margin: 20px auto;
     box-shadow: 3px 3px 10px rgba(9, 9, 9, 0.25);
+    cursor: pointer;
+}
+
+.explore:hover {
+    opacity: 0.8;
+    box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 50%);
 }
 
 #working {

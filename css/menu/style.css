@@ -43,6 +43,7 @@ nav i {
     left: 30px;
     transform: translate(-50%, -50%);
     font-size: 17px;
+    color: black;
 }
 
 img {
@@ -98,32 +99,30 @@ i.dnone {
 }
 
 #entrees, #plats, #desserts {
-    background-color: #e6e6e6;
-    padding: 0 10px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+    padding: 0 10px 30px 10px;
     position: relative;
-    margin-bottom: 30px;
 }
 
 @keyframes apparition {
     0% {
+        transform: translateY(20px);
         opacity: 0;
     }
     100% {
+        transform: translateY(0);
         opacity: 1;
     }
 }
 
-#entrees, #plats, #desserts {
+#entrees li {
     animation: apparition 2s;
 }
 
-#plats {
+#plats li {
     animation: apparition 4s;
 }
 
-#desserts {
+#desserts li {
     animation: apparition 6s;
 }
 
@@ -166,6 +165,7 @@ li {
     background-color: white;
     border-radius: 20px;
     display: flex;
+    overflow: hidden;
 }
 
 .detail {
@@ -201,18 +201,31 @@ li:hover .detail {
 }
 
 li:hover .check {
-    animation: check 1s linear forwards;
+    animation: check 500ms linear forwards;
 }
+
+li:hover .check i {
+    animation: rotate-check 500ms linear forwards;
+}
+
 
 @keyframes check {
     from {
-        width: 0%
+        width: 0;
     }
     to {
         width: 20%;
     }
 }
 
+@keyframes rotate-check {
+    from {
+        transform: rotate(-360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
 
 @keyframes plat {
     from {
@@ -222,6 +235,15 @@ li:hover .check {
         width: 80%;
     }
 }
+
+
+h3, h4 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0 40px 0 0;
+}
+
 
 button {
     display: block;
