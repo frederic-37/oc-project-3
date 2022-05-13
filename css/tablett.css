@@ -1,0 +1,40 @@
+:root {
+    font-size: 13px;
+}
+
+#working {
+    display: block;
+}
+
+#working h2 {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    align-items: center;
+}
+
+ul li {
+    min-width: 400px;
+    max-width: 600px;
+}
+
+#etbs {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50px 275px 275px;
+}
+
+#etbs h2 {
+    display: flex;
+    justify-content: center;
+    grid-column: 1 / 3;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

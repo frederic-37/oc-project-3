@@ -166,6 +166,7 @@ li {
     border-radius: 20px;
     display: flex;
     overflow: hidden;
+    position: relative;
 }
 
 .detail {
@@ -197,7 +198,7 @@ i.fas.fa-check-circle {
 }
 
 li:hover .detail {
-    animation: plat 1s linear forwards;
+    animation: plat 500ms linear forwards;
 }
 
 li:hover .check {
@@ -236,8 +237,7 @@ li:hover .check i {
     }
 }
 
-
-h3, h4 {
+.detail h3, .detail h4 {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -263,26 +263,24 @@ button {
 
 button:hover {
     opacity: 0.8;
-    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 10px rgb(0 0 0);
 }
 
 footer {
     background-color: #282828;
     color: #FFF;
-    padding: 30px 0;
+    padding: 30px 20px;
 }
 
 .footer_logo {
     margin-bottom: 15px;
-    font-family: Shrikhand, Helvetica sans-serif;
+    font-family: Shrikhand, Helvetica, sans-serif;
     font-weight: bold;
 }
 
 footer a {
     display: block;
-    margin: 0 0 10px 20px;
     color: #e6e6e6;
-    line-height: 1;
     font-size: 15px;
 }
 

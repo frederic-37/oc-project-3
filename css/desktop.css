@@ -1,11 +1,35 @@
+ul {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, minmax(auto, 400px));
+    grid-gap: 20px;
+}
 
+ul li {
+    width: auto;
+    min-width: auto;
+    padding: 0 0 0 30px;
+}
 
+.number {
+    font-size: 1.5rem;
+}
 
+#etbs {
+    grid-template-columns: repeat(2, minmax(auto, 610px));
+    justify-content: center;
+    grid-template-rows: 50px 275px 275px;
+}
+
+/*
 #working ul {
     flex-direction: initial;
-    min-width: 700px;
     justify-content: space-around;
 }
+ ul li {
+     min-width: 290px;
+     max-width: 500px;
+ }*/
 
 footer {
     display: flex;

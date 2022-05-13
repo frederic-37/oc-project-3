@@ -1,0 +1,22 @@
+
+
+#working ul {
+    flex-direction: initial;
+    min-width: 700px;
+    justify-content: space-around;
+}
+
+article {
+    display: flex;
+}
+
+#entrees, #plats, #desserts {
+    width: calc(100% / 3);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
