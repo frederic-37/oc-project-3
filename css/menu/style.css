@@ -51,7 +51,6 @@ img {
     object-fit: cover;
 }
 
-/* en dessous de image */
 main header {
     display: flex;
     flex-direction: column;
@@ -63,7 +62,6 @@ main {
     padding-bottom: 20px;
 }
 
-/* icone coeur */
 main header i {
     position: absolute;
     bottom: 30px;

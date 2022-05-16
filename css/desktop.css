@@ -21,15 +21,6 @@ ul li {
     grid-template-rows: 50px 275px 275px;
 }
 
-/*
-#working ul {
-    flex-direction: initial;
-    justify-content: space-around;
-}
- ul li {
-     min-width: 290px;
-     max-width: 500px;
- }*/
 
 footer {
     display: flex;
